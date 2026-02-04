@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProjectFilters from '../components/ProjectFilters.jsx';
+
+const proyectos = [
+    { title: "E-commerce Zen", description: "Tienda online minimalista.", tags: ["React", "Next.js"] },
+    { title: "AI Chatbot", description: "Asistente inteligente.", tags: ["Python", "OpenAI"] },
+    { title: "Crypto Dash", description: "Panel de criptomonedas.", tags: ["React", "TypeScript"] }
+];
+---
+
+<Layout title="Portfolio Interactivo">
+	<main class="min-h-screen bg-slate-950 px-6 py-20 text-white">
+		<div class="max-w-5xl mx-auto">
+			<h1 class="text-4xl font-bold mb-12 text-center">Mis <span class="text-orange-500">Proyectos</span></h1>
+			
+			{/* IMPORTANTE: El client:load activa React en el navegador */}
+			<ProjectFilters initialProjects={proyectos} client:load />
+		</div>
+	</main>
+</Layout>
