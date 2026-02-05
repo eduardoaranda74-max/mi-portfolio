@@ -1,0 +1,176 @@
+---
+// src/components/Skills.astro
+
+const skillCategories = [
+  {
+    title: "Frontend",
+    icon: "💻",
+    skills: [
+      { name: "React", level: 90 },
+      { name: "Next.js", level: 85 },
+      { name: "TypeScript", level: 80 },
+      { name: "Tailwind CSS", level: 90 },
+      { name: "Astro", level: 75 },
+    ]
+  },
+  {
+    title: "Backend",
+    icon: "⚙️",
+    skills: [
+      { name: "Python", level: 85 },
+      { name: "Node.js", level: 80 },
+      { name: "PostgreSQL", level: 75 },
+      { name: "MongoDB", level: 70 },
+      { name: "REST APIs", level: 85 },
+    ]
+  },
+  {
+    title: "Herramientas",
+    icon: "🛠️",
+    skills: [
+      { name: "Git", level: 85 },
+      { name: "Docker", level: 70 },
+      { name: "Vercel", level: 80 },
+      { name: "VS Code", level: 95 },
+      { name: "Figma", level: 65 },
+    ]
+  },
+  {
+    title: "Otros",
+    icon: "✨",
+    skills: [
+      { name: "OpenAI API", level: 80 },
+      { name: "Web Scraping", level: 75 },
+      { name: "SEO", level: 70 },
+      { name: "Testing", level: 65 },
+      { name: "CI/CD", level: 60 },
+    ]
+  }
+];
+---
+
+<section id="habilidades" class="py-20 bg-slate-950">
+  <div class="container mx-auto px-6">
+    
+    <div class="text-center mb-16">
+      <span class="text-orange-500 font-semibold text-sm uppercase tracking-wider">Mi Stack</span>
+      <h2 class="text-4xl md:text-5xl font-bold text-white mt-2">
+        Habilidades
+      </h2>
+      <p class="text-slate-400 text-lg mt-4 max-w-2xl mx-auto">
+        Tecnologías y herramientas con las que trabajo para crear soluciones increíbles
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6 mb-16">
+      {skillCategories.map((category) => (
+        <div class="bg-slate-900 border-2 border-slate-800 rounded-2xl p-8 hover:border-orange-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-orange-500/20">
+          
+          <div class="flex items-center gap-4 mb-6">
+            <span class="text-4xl">{category.icon}</span>
+            <h3 class="text-2xl font-bold text-white">{category.title}</h3>
+          </div>
+          
+          <div class="space-y-4">
+            {category.skills.map((skill) => (
+              <div>
+                <div class="flex justify-between items-center mb-2">
+                  <span class="text-slate-300 font-semibold">{skill.name}</span>
+                  <span class="text-orange-500 font-bold text-sm">{skill.level}%</span>
+                </div>
+                <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
+                  <div 
+                    class="h-full bg-orange-600 rounded-full transition-all duration-1000 ease-out shadow-[0_0_10px_rgba(234,88,12,0.4)]"
+                    style={`width: ${skill.level}%`}
+                  ></div>
+                </div>
+              </div>
+            ))}
+          </div>
+          
+        </div>
+      ))}
+    </div>
+
+    <div class="border-t border-slate-800 pt-16">
+      <h3 class="text-2xl font-bold text-white text-center mb-10">
+        Tecnologías que uso:
+      </h3>
+      
+      <div class="flex flex-wrap justify-center gap-8">
+        <div class="flex flex-col items-center gap-2 group cursor-pointer transition-transform hover:-translate-y-2">
+          <img 
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" 
+            alt="React" 
+            class="w-16 h-16 transition-all"
+          />
+          <span class="text-slate-400 text-sm font-semibold group-hover:text-orange-500">React</span>
+        </div>
+        
+        <div class="flex flex-col items-center gap-2 group cursor-pointer transition-transform hover:-translate-y-2">
+          <img 
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" 
+            alt="Next.js" 
+            class="w-16 h-16 transition-all bg-white rounded-lg p-2"
+          />
+          <span class="text-slate-400 text-sm font-semibold group-hover:text-orange-500">Next.js</span>
+        </div>
+        
+        <div class="flex flex-col items-center gap-2 group cursor-pointer transition-transform hover:-translate-y-2">
+          <img 
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" 
+            alt="Python" 
+            class="w-16 h-16 transition-all"
+          />
+          <span class="text-slate-400 text-sm font-semibold group-hover:text-orange-500">Python</span>
+        </div>
+        
+        <div class="flex flex-col items-center gap-2 group cursor-pointer transition-transform hover:-translate-y-2">
+          <img 
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" 
+            alt="TypeScript" 
+            class="w-16 h-16 transition-all"
+          />
+          <span class="text-slate-400 text-sm font-semibold group-hover:text-orange-500">TypeScript</span>
+        </div>
+        
+        <div class="flex flex-col items-center gap-2 group cursor-pointer transition-transform hover:-translate-y-2">
+          <img 
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" 
+            alt="Node.js" 
+            class="w-16 h-16 transition-all"
+          />
+          <span class="text-slate-400 text-sm font-semibold group-hover:text-orange-500">Node.js</span>
+        </div>
+        
+        <div class="flex flex-col items-center gap-2 group cursor-pointer transition-transform hover:-translate-y-2">
+          <img 
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" 
+            alt="PostgreSQL" 
+            class="w-16 h-16 transition-all"
+          />
+          <span class="text-slate-400 text-sm font-semibold group-hover:text-orange-500">PostgreSQL</span>
+        </div>
+        
+        <div class="flex flex-col items-center gap-2 group cursor-pointer transition-transform hover:-translate-y-2">
+          <img 
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" 
+            alt="MongoDB" 
+            class="w-16 h-16 transition-all"
+          />
+          <span class="text-slate-400 text-sm font-semibold group-hover:text-orange-500">MongoDB</span>
+        </div>
+        
+        <div class="flex flex-col items-center gap-2 group cursor-pointer transition-transform hover:-translate-y-2">
+          <img 
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" 
+            alt="Tailwind" 
+            class="w-16 h-16 transition-all" 
+          />
+          <span class="text-slate-400 text-sm font-semibold group-hover:text-orange-500">Tailwind</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
