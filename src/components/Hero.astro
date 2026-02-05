@@ -37,19 +37,19 @@ import profilePhoto from '../assets/profile.jpg';
         </div>
       </div>
 
-      <div class="relative lg:block hidden">
-        <div class="relative w-full max-w-lg mx-auto">
-          <div class="absolute inset-0 bg-orange-600 rounded-full blur-[100px] opacity-20 animate-pulse"></div>
-          
-          <div class="relative z-10">
-            <Image 
-              src={profilePhoto} 
-              alt="Eduardo Aranda" 
-              class="w-full h-auto rounded-full border-4 border-orange-600/30 shadow-2xl object-cover aspect-square"
-            />
-          </div>
-        </div>
-      </div>
+     <div class="relative block mt-12 lg:mt-0"> 
+  <div class="relative w-64 h-64 md:w-80 md:h-80 lg:w-full max-w-md mx-auto">
+    <div class="absolute inset-0 bg-orange-600 rounded-full blur-[80px] opacity-20 animate-pulse"></div>
+    
+    <div class="relative z-10">
+      <Image 
+        src={profilePhoto} 
+        alt="Eduardo Aranda" 
+        class="w-full h-full rounded-full border-4 border-orange-600/30 shadow-2xl object-cover aspect-square"
+      />
+    </div>
+  </div>
+</div>
 
     </div>
   </div>
