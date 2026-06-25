@@ -37,15 +37,27 @@ export default function ProjectFilters({ initialProjects }) {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.3 }}
-              className="bg-slate-900 p-6 rounded-2xl border border-slate-800"
+              className="bg-slate-900 p-6 rounded-2xl border border-slate-800 flex flex-col justify-between"
             >
-              <h3 className="text-xl font-bold text-orange-400 mb-2">{p.title}</h3>
-              <p className="text-slate-400 text-sm mb-4">{p.description}</p>
-              <div className="flex flex-wrap gap-2">
-                {p.tags.map(tag => (
-                  <span key={tag} className="text-xs text-slate-500 font-mono">#{tag}</span>
-                ))}
+              <div>
+                <h3 className="text-xl font-bold text-orange-400 mb-2">{p.title}</h3>
+                <p className="text-slate-400 text-sm mb-4">{p.description}</p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {p.tags.map(tag => (
+                    <span key={tag} className="text-xs text-slate-500 font-mono">#{tag}</span>
+                  ))}
+                </div>
               </div>
+              {p.url && (
+                <a
+                  href={p.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block text-sm font-semibold text-orange-500 border border-orange-500 rounded-lg px-4 py-2 hover:bg-orange-500 hover:text-white transition-all duration-200 text-center"
+                >
+                  Ver sitio →
+                </a>
+              )}
             </motion.div>
           ))}
         </AnimatePresence>
