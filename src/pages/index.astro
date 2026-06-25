@@ -5,7 +5,7 @@ import Hero from '../components/Hero.astro';
 import About from '../components/About.astro';
 import Skills from '../components/Skills.astro';
 import ProjectFilters from '../components/ProjectFilters.jsx';
-import Contact from '../components/Contact.jsx';
+import Contacto from '../components/Contacto.astro';
 
 const proyectos = [
     { title: "E-commerce Zen", description: "Tienda online...", tags: ["React", "Next.js"] },
@@ -39,7 +39,5 @@ const proyectos = [
     </main>
 
     <!-- Contact Section -->
-    <div id="contacto" class="bg-slate-900 py-20">
-        <Contact client:visible />
-    </div>
+    <Contacto />
 </Layout>

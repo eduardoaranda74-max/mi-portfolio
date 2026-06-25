@@ -1,0 +1,107 @@
+<section id="contacto" class="contacto">
+  <h2>Hablemos</h2>
+  <p>Atiendo de forma presencial en Pilar o por WhatsApp. Sin cargo la primera consulta.</p>
+
+  <div class="contacto-datos">
+
+    <div class="dato">
+      <span class="icono">📍</span>
+      <div>
+        <strong>Oficina</strong>
+        <p>Hipólito Irigoyen 416, Pilar centro<br>Buenos Aires, Argentina</p>
+      </div>
+    </div>
+
+    <div class="dato">
+      <span class="icono">💬</span>
+      <div>
+        <strong>WhatsApp</strong>
+        <a
+          href="https://wa.me/541133102398?text=Hola%2C%20vi%20tu%20portfolio%20y%20quer%C3%ADa%20consultar%20sobre%20un%20sitio%20web"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Escribinos al 11 3310-2398
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .contacto {
+    background-color: #0f172a;
+    padding: 5rem 1.5rem;
+    text-align: center;
+    color: #e2e8f0;
+  }
+
+  .contacto h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+
+  .contacto > p {
+    color: #94a3b8;
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+  }
+
+  .contacto-datos {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .dato {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 1rem;
+    padding: 1.25rem 1.5rem;
+    text-align: left;
+  }
+
+  .icono {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  .dato strong {
+    display: block;
+    color: #f97316;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+  }
+
+  .dato p {
+    color: #cbd5e1;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .dato a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .dato a:hover {
+    color: #f97316;
+  }
+
+  @media (min-width: 640px) {
+    .contacto-datos {
+      flex-direction: row;
+    }
+  }
+</style>
