@@ -1,0 +1,119 @@
+---
+const servicios = [
+  {
+    icono: "🎨",
+    nombre: "Landing Page",
+    precio: "desde USD 120",
+    descripcion: "Sitio de una página diseñado para convertir visitas en consultas.",
+    incluye: [
+      "Diseño responsive (mobile y desktop)",
+      "Secciones: hero, servicios, sobre mí, contacto",
+      "Formulario de contacto funcional",
+      "Optimización básica de velocidad",
+      "Entrega en 5–7 días",
+    ],
+    destacado: false,
+  },
+  {
+    icono: "⚡",
+    nombre: "Sitio Web Profesional",
+    precio: "desde USD 250",
+    descripcion: "Para negocios que necesitan más que una landing: varias páginas, contenido dinámico y presencia sólida.",
+    incluye: [
+      "Todo lo del plan Landing Page",
+      "Múltiples páginas (hasta 5)",
+      "Integración con WhatsApp y redes sociales",
+      "Galería de productos o servicios",
+      "SEO básico incluido",
+      "Entrega en 10–15 días",
+    ],
+    destacado: true,
+  },
+  {
+    icono: "🚀",
+    nombre: "Sistema Web a Medida",
+    precio: "Consultar",
+    descripcion: "Aplicaciones web completas con base de datos, panel de administración y lógica de negocio personalizada.",
+    incluye: [
+      "Todo lo del plan Profesional",
+      "Panel de administración (PHP + MySQL)",
+      "CRUD: clientes, productos, pedidos, etc.",
+      "Sistema de login y sesiones",
+      "Funcionalidad definida con el cliente",
+    ],
+    destacado: false,
+  },
+];
+---
+
+<section id="servicios" class="py-20 bg-slate-900">
+  <div class="container mx-auto px-6">
+
+    <div class="text-center mb-16">
+      <span class="text-orange-500 font-semibold text-sm uppercase tracking-wider">Lo que ofrezco</span>
+      <h2 class="text-4xl md:text-5xl font-bold text-white mt-2">
+        Servicios y <span class="text-orange-500">Precios</span>
+      </h2>
+      <p class="text-slate-400 text-lg mt-4 max-w-2xl mx-auto">
+        Trabajo con negocios y profesionales de Pilar y toda Argentina. Presupuesto sin compromiso.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 items-start">
+      {servicios.map((s) => (
+        <div class={`relative flex flex-col rounded-2xl p-8 border-2 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl ${
+          s.destacado
+            ? "bg-orange-600 border-orange-500 shadow-xl shadow-orange-500/30"
+            : "bg-slate-950 border-slate-800 hover:border-orange-500 hover:shadow-orange-500/20"
+        }`}>
+
+          {s.destacado && (
+            <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-white text-orange-600 text-xs font-bold uppercase tracking-widest px-4 py-1 rounded-full shadow">
+              Más popular
+            </span>
+          )}
+
+          <div class="text-4xl mb-4">{s.icono}</div>
+
+          <h3 class={`text-2xl font-bold mb-1 ${s.destacado ? "text-white" : "text-white"}`}>
+            {s.nombre}
+          </h3>
+
+          <p class={`text-3xl font-extrabold mb-3 ${s.destacado ? "text-white" : "text-orange-400"}`}>
+            {s.precio}
+          </p>
+
+          <p class={`text-sm mb-6 leading-relaxed ${s.destacado ? "text-orange-100" : "text-slate-400"}`}>
+            {s.descripcion}
+          </p>
+
+          <ul class="space-y-2 mb-8 flex-grow">
+            {s.incluye.map((item) => (
+              <li class={`flex items-start gap-2 text-sm ${s.destacado ? "text-orange-50" : "text-slate-300"}`}>
+                <span class={`mt-0.5 shrink-0 ${s.destacado ? "text-white" : "text-orange-500"}`}>✓</span>
+                {item}
+              </li>
+            ))}
+          </ul>
+
+          <a
+            href="#contacto"
+            class={`block text-center font-semibold rounded-lg px-6 py-3 transition-all duration-200 ${
+              s.destacado
+                ? "bg-white text-orange-600 hover:bg-orange-50"
+                : "border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white"
+            }`}
+          >
+            Solicitar presupuesto
+          </a>
+
+        </div>
+      ))}
+    </div>
+
+    <p class="text-center text-slate-500 text-sm mt-10">
+      * Los precios son orientativos y pueden variar según los requerimientos del proyecto. Todos los precios en USD.
+    </p>
+
+  </div>
+</section>
